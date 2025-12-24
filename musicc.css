@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+/* ===== BODY ===== */
+body{
+  background:radial-gradient(circle at top,#1b1b1b,#050505);
+  color:#eee;
+}
+
+/* ===== HEADER ===== */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 70px;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(15px);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.header h1{
+  color:#00ffd5;
+  letter-spacing:1px;
+}
+
+.header nav a{
+  margin-left:30px;
+  color:#aaa;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.header nav a:hover,
+.header nav a.active{
+  color:#00ffd5;
+}
+
+/* ===== HERO ===== */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:90px;
+  gap:80px;
+}
+
+.hero-left{
+  max-width:50%;
+}
+
+.hero-left h3{
+  color:#00ffd5;
+  letter-spacing:2px;
+}
+
+.hero-left h1{
+  font-size:48px;
+  margin:15px 0;
+}
+
+.hero-left p{
+  color:#999;
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress-box{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:35px 0;
+  font-size:13px;
+}
+
+.progress{
+  flex:1;
+  height:6px;
+  background:#222;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.progress-fill{
+  width:40%;
+  height:100%;
+  background:linear-gradient(90deg,#00ffd5,#007cff);
+  animation:progressMove 3s infinite alternate;
+}
+
+@keyframes progressMove{
+  from{width:20%}
+  to{width:80%}
+}
+
+/* ===== CONTROLS ===== */
+.controls i{
+  font-size:34px;
+  margin-right:30px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.controls i:hover{
+  color:#00ffd5;
+  transform:scale(1.2);
+}
+
+.play{
+  font-size:46px;
+}
+
+/* ===== HERO IMAGE ===== */
+.hero-right img{
+  width:460px;
+  border-radius:35px;
+  box-shadow:0 40px 80px rgba(0,0,0,0.8);
+  transition:0.4s;
+}
+
+.hero-right img:hover{
+  transform:scale(1.05) rotate(1deg);
+}
+
+/* ===== ALBUMS ===== */
+.albums{
+  padding:80px;
+}
+
+.albums h2{
+  margin-bottom:35px;
+  color:#fff;
+}
+
+.album-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:35px;
+}
+
+.album{
+  background:linear-gradient(145deg,#0d0d0d,#1c1c1c);
+  padding:22px;
+  border-radius:25px;
+  transition:0.4s;
+}
+
+.album img{
+  width:100%;
+  border-radius:20px;
+}
+
+.album h4{
+  margin-top:15px;
+}
+
+.album p{
+  font-size:13px;
+  color:#888;
+}
+
+.album:hover{
+  transform:translateY(-12px);
+  box-shadow:0 30px 60px rgba(0,255,213,0.18);
+}
+
+/* ===== PLAYLIST ===== */
+.playlist-section{
+  padding:80px;
+}
+
+.playlist-section h2{
+  margin-bottom:30px;
+}
+
+.song{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  padding:22px;
+  margin-bottom:22px;
+  border-radius:25px;
+  background:linear-gradient(145deg,#0e0e0e,#1a1a1a);
+  cursor:pointer;
+  transition:0.4s;
+}
+
+.song img{
+  width:90px;
+  height:90px;
+  border-radius:18px;
+  object-fit:cover;
+}
+
+.song-info h4{
+  font-size:17px;
+}
+
+.song-info p{
+  font-size:13px;
+  color:#888;
+}
+
+.song span{
+  margin-left:auto;
+  color:#aaa;
+  font-size:13px;
+}
+
+.song:hover{
+  transform:translateX(14px);
+  background:linear-gradient(90deg,#002f2a,#001a2f);
+}
+
+.song.active{
+  background:linear-gradient(90deg,#00ffd5,#007cff);
+  color:#000;
+}
+
+.song.active p,
+.song.active span{
+  color:#000;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  text-align:center;
+  padding:40px;
+  background:#000;
+  color:#777;
+  margin-top:50px;
+}
